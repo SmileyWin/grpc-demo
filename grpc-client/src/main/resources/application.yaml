@@ -1,0 +1,11 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: wsl-grpc-client
+grpc:
+  client:
+#    your grpc server name
+    wsl-grpc-server:
+      host[0]: 127.0.0.1
+      port[0]: 9099

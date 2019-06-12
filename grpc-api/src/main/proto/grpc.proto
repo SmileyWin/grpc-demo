@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package buerchao;
+
+option java_package = "com.example.timeout.grpc";
+option java_outer_classname = "DemoProtocol";
+
+//接口服务的定义
+service DemoService {
+    rpc call (GrpcRequest) returns (GrpcResponse) {}
+}
+
+//request
+message GrpcRequest {
+    int64 id = 1;
+    string name = 2;
+    string phone = 3;
+}
+
+//response
+message GrpcResponse {
+    int32 code = 1;
+    string message = 2;
+}
